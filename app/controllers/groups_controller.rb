@@ -14,7 +14,8 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    end
+    find_group_and_check_permission
+  end
 
     def update
        if @group.update(group_params)
@@ -28,7 +29,7 @@ class GroupsController < ApplicationController
        @group.destroy
        redirect_to groups_path, alert: "Group deleted"
      end
-     
+
 
 
  private
