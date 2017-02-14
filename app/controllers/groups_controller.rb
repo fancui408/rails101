@@ -6,13 +6,11 @@ def new
    @group = Group.new
  end
 
- class Account::GroupsController < ApplicationController
-   before_action :authenticate_user!
 
    def index
      @groups = current_user.participated_groups
    end
- end
+ 
 
   def show
     @group = Group.find(params[:id])
