@@ -35,7 +35,12 @@ def new
      redirect_to groups_path, alert: "Group deleted"
    end
 
+   def create
+     @group = Group.new(group_params)
+     @group.save
 
+       redirect_to groups_path
+   end
 
  private
 
