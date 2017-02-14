@@ -6,7 +6,7 @@ end
 def new
    @group = Group.new
  end
-end
+
 
 
   def index
